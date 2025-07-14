@@ -1,5 +1,37 @@
 document.querySelectorAll('.ramo').forEach(ramo => {
+  ramo.classList.add('locked');
+});
+
+function desbloquearRamos() {
+  document.querySelectorAll('.ramo').forEach(ramo => {
+    const pr = ramo.getAttribute('data-pr');
+    if (!pr || pr === '' || pr === '240 SCT') {
+      ramo.classList.remove('locked');
+    } else {
+      const prereqs = pr.split(',').map(p => p.trim());
+      const cumplidos = prereqs.every(p => {
+        const prElement = document.getElementById(p);
+        return prElement && prElement.classList.contains('completed');
+      });
+      if (cumplidos) {
+        ramo.classList.remove('locked');
+      } else {
+        ramo.classList.add('locked');
+      }
+    }
+  });
+}
+
+document.querySelectorAll('.ramo').forEach(ramo => {
   ramo.addEventListener('click', () => {
+    if (ramo.classList.contains('locked')) {
+      alert('Debes completar el prerrequisito primero.');
+      return;
+    }
+
+    ramo.classList.toggle('completed');
+    desbloquearRamos();
+
     const pr = ramo.getAttribute('data-pr');
     let mensaje = '';
 
@@ -63,3 +95,5 @@ document.querySelectorAll('.ramo').forEach(ramo => {
     alert(mensaje);
   });
 });
+
+desbloquearRamos();
