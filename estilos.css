@@ -16,6 +16,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  position: relative;
 }
 
 .ramo {
@@ -24,10 +25,10 @@ h1 {
   color: #2c3e50;
   padding: 12px;
   border-radius: 8px;
-  width: 220px;
+  width: 200px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
   position: relative;
 }
@@ -36,6 +37,22 @@ h1 {
   transform: scale(1.05);
   background-color: #ecfaff;
   border-color: #2980b9;
+}
+
+.ramo.locked {
+  background-color: #e0e0e0;
+  border-color: #aaa;
+  color: #888;
+  opacity: 0.6;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.ramo.completed {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  text-decoration: line-through;
 }
 
 .ramo::after {
