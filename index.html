@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva - Enfermería UCSH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Curricular Interactiva – Enfermería UCSH (Plan B 2020)</h1>
+  <div class="malla">
+    <!-- Nivel 1 -->
+    <div class="ramo" id="quimica">Química</div>
+    <div class="ramo" id="biologia">Biología</div>
+    <div class="ramo" id="educacion_salud">Educación para la Salud y Primeros Auxilios</div>
+    <div class="ramo" id="socioantropologia">Socioantropología en Salud</div>
+    <div class="ramo" id="cfg1">Curso de Formación General 1</div>
+
+    <!-- Nivel 2 -->
+    <div class="ramo" id="bioquimica" data-pr="quimica">Bioquímica</div>
+    <div class="ramo" id="morfo1">Morfo Función I</div>
+    <div class="ramo" id="bioestadistica">Bioestadística</div>
+    <div class="ramo" id="psicologia_general">Psicología General</div>
+    <div class="ramo" id="introduccion_enfermeria">Introducción a la Ciencia de la Enfermería</div>
+    <div class="ramo" id="cfg2">Curso de Formación General 2</div>
+
+    <!-- Nivel 3 -->
+    <div class="ramo" id="morfo2" data-pr="morfo1">Morfo Función II</div>
+    <div class="ramo" id="microbiologia">Microbiología</div>
+    <div class="ramo" id="psicologia_evolutiva">Psicología Evolutiva</div>
+    <div class="ramo" id="seguridad_cuidado">Seguridad del Cuidado</div>
+    <div class="ramo" id="ciclo1">Ciclo Vital I</div>
+    <div class="ramo" id="cfg3">Curso de Formación General 3</div>
+
+    <!-- Nivel 4 -->
+    <div class="ramo" id="fisiologia" data-pr="biologia">Fisiología</div>
+    <div class="ramo" id="farmacologia">Farmacología</div>
+    <div class="ramo" id="ciclo2" data-pr="ciclo1">Ciclo Vital II</div>
+    <div class="ramo" id="cuidados_mayores1">Cuidados de Enfermería en Personas Mayores I</div>
+    <div class="ramo" id="fisiopatologia">Fisiopatología</div>
+    <div class="ramo" id="cfg4">Curso de Formación General 4</div>
+
+    <!-- Nivel 5 -->
+    <div class="ramo" id="salud_mental" data-pr="ciclo2">Cuidados de Enfermería en Salud Mental</div>
+    <div class="ramo" id="cuidados_ninos1" data-pr="ciclo2">Cuidados de Enfermería en Niños/as y Adolescentes I</div>
+    <div class="ramo" id="comunidad1">Enfermería en Comunidad I</div>
+    <div class="ramo" id="cuidados_mayores2" data-pr="cuidados_mayores1">Cuidados de Enfermería en Personas Mayores II</div>
+    <div class="ramo" id="cfg5">Curso de Formación General 5</div>
+
+    <!-- Nivel 6 -->
+    <div class="ramo" id="gestion_cuidado">Gestión del Cuidado</div>
+    <div class="ramo" id="cuidados_ninos2" data-pr="cuidados_ninos1">Cuidados de Enfermería en Niños/as y Adolescentes II</div>
+    <div class="ramo" id="comunidad2" data-pr="comunidad1">Enfermería en Comunidad II</div>
+    <div class="ramo" id="adulto1" data-pr="fisiopatologia">Cuidados de Enfermería en el Adulto I</div>
+    <div class="ramo" id="cfg6">Curso de Formación General 6</div>
+
+    <!-- Nivel 7 -->
+    <div class="ramo" id="mejora_cuidado">Mejora Continua del Cuidado</div>
+    <div class="ramo" id="necesidades_especiales" data-pr="cuidados_ninos2">Cuidados en Niños/as con Necesidades Especiales</div>
+    <div class="ramo" id="urgencia1" data-pr="adulto1">Cuidados en Situaciones de Urgencia I</div>
+    <div class="ramo" id="adulto2" data-pr="adulto1">Cuidados de Enfermería en el Adulto II</div>
+    <div class="ramo" id="optativo1">Optativo</div>
+
+    <!-- Nivel 8 -->
+    <div class="ramo" id="fin_vida">Cuidados en Procesos de Fin de Vida</div>
+    <div class="ramo" id="cancer" data-pr="necesidades_especiales">Cuidados en Personas con Cáncer</div>
+    <div class="ramo" id="urgencia2" data-pr="urgencia1">Cuidados en Situaciones de Urgencia II</div>
+    <div class="ramo" id="familiar_domiciliaria" data-pr="comunidad2">Cuidados Familiar y Enfermería Domiciliaria</div>
+    <div class="ramo" id="optativo2">Optativo</div>
+
+    <!-- Nivel 9 y 10 -->
+    <div class="ramo" id="diseno_critico">Diseño Metodológico y Pensamiento Crítico</div>
+    <div class="ramo" id="bioetica">Bioética y Derecho Sanitario</div>
+    <div class="ramo" id="genero">Enfoque de Género en Salud</div>
+    <div class="ramo" id="seminario" data-pr="diseno_critico">Seminario de Enfermería</div>
+    <div class="ramo" id="internado1" data-pr="240 SCT">Internado I</div>
+    <div class="ramo" id="internado2" data-pr="240 SCT">Internado II</div>
+    <div class="ramo" id="examen_titulo">Exámen de Título</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
